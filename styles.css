@@ -1,24 +1,40 @@
 body {
   font-family: sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background-color: #fdf6ec;
+  color: rgb(59, 42, 32);
 }
 
 h1, h2 {
+  font-family: "Times New Roman", Times, serif;
   color: saddlebrown;
 }
 
-nav a {
-  text-decoration: none;
-}
-
-.special {
-  color: saddlebrown;
-}
-
-main {
-  max-width: 25rem;
+header {
+  background-color: rgba(139, 69, 19, 0.12);
 }
 
 footer {
-  font-size: 0.9rem;
-  color: dimgray;
+  background-color: hsl(25, 76%, 31%);
+  color: hsl(35, 70%, 95%);
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+nav a {
+  color: saddlebrown;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header, footer {
+  text-align: center;
+}
+
+footer p {
+  font-style: italic;
 }

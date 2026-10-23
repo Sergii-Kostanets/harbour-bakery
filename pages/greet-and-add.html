@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting and addition example | Harbour Bakery</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <main>
+        <h1>Greeting and addition example</h1>
+        <p id="greeting"></p>
+        <p id="sum"></p>
+        <p><a href="../index.html">Return to Harbour Bakery</a></p>
+    </main>
+    <script>
+        const visitorName = prompt("What is your name?");
+        document.querySelector("#greeting").textContent = visitorName
+            ? `Hello, ${visitorName}!`
+            : "Hello, visitor!";
+
+        const firstInput = prompt("Please enter the first number");
+        const secondInput = prompt("Please enter the second number");
+        const firstNumber = Number(firstInput);
+        const secondNumber = Number(secondInput);
+
+        if (
+            firstInput !== null &&
+            firstInput.trim() !== "" &&
+            secondInput !== null &&
+            secondInput.trim() !== "" &&
+            Number.isFinite(firstNumber) &&
+            Number.isFinite(secondNumber)
+        ) {
+            document.querySelector("#sum").textContent =
+                `The sum is ${firstNumber + secondNumber}.`;
+        } else {
+            document.querySelector("#sum").textContent =
+                "Please enter two valid numbers to calculate their sum.";
+        }
+    </script>
+</body>
+</html>
